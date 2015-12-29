@@ -1,10 +1,10 @@
 var gemini = require('gemini');
 
-class BaseMobilePage {
+class Util {
 
     constructor() {
     }
 
 }
 
-module.exports = BaseMobilePage;
+module.exports = Util;
