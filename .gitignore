@@ -1,0 +1,8 @@
+es5
+*.log
+.idea
+.DS_Store
+node_modules
+*private*js
+testresults
+.idea/workspace.xml

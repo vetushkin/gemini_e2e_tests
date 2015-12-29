@@ -1,0 +1,38 @@
+var AccountNetentPage = require('../../../source/general/pages/account_netent_page.js');
+
+describe('Account Netent bonus page verification', function(){
+	var page = new AccountNetentPage();
+
+	beforeAll(function(){
+		page.visit('');
+		page.login();
+		page.visit('account/netent_bonus');
+	});
+
+	afterAll(function(){
+		page.logout();
+	});
+
+	beforeEach(function(){
+		page.closeAd();
+	});
+
+	afterEach(function(){
+	});
+
+	it('Verify that Balance is showed in the correct format', function(){
+		expect(page.bonusBalance('balance')).toMatch(/\$[0-9]+\.[0-9]+/);
+	});
+
+	it('Verify that BONUS is showed in the correct format', function(){
+		expect(page.bonusBalance('bonus')).toMatch(/\$[0-9]+\.[0-9]+/);
+	});
+
+	it('Verify that Wagered balance is showed in the correct format', function(){
+		expect(page.bonusBalance('wagered')).toMatch(/\$[0-9]+\.[0-9]+/);
+	});
+
+	it('Verify that Left To Wager balance is showed in the correct format', function(){
+		expect(page.bonusBalance('left_to_wager')).toMatch(/\$[0-9]+\.[0-9]+/);
+	});
+});
