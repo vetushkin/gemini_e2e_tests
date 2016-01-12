@@ -1,8 +1,11 @@
 es5
 *.log
+*.png
 .idea
 .DS_Store
 node_modules
 *private*js
 testresults
+gemini/screens/**
+gemini-report/
 .idea/workspace.xml
