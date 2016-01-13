@@ -1,12 +1,14 @@
-var SportsPage = require('../../source/general/pages/sports_page');
-var page = new SportsPage();
+var LivePage = require('../../source/general/pages/live_page');
+var page = new LivePage();
 
-page.start().suite('KlasBahis Sportsbook Page', function(parent) {
-	parent.setUrl('/').before(function(actions, find) {
+page.start().suite('KlasBahis Live Page', function(parent) {
+	parent.setUrl('/tr-TR/live').before(function(actions, find) {
 		this.userName = find('#user_username');
 		this.password = find('#user_password');
 		this.submitButton = find('#logged_out_bar input[type="submit"]');
 		this.cashoutTab = find('#betslip .tabs a[data-link="open_mybets"]');
+		this.openedLiveSport = find('#livebetting_menu div[class*="opened"] div[class*="header"]');
+		this.liveSports
 		actions.setWindowSize(1920, 1080);
 	});
 
@@ -36,36 +38,38 @@ page.start().suite('KlasBahis Sportsbook Page', function(parent) {
 		});
 	});
 
-	page.start().suite('Favourites Menu', function(child) {
+	page.start().suite('Live Favourites Menu', function(child) {
 		child
-		.setCaptureElements(page.getFavouritesMenu())
+		.setCaptureElements(page.getLiveFavourites())
 		.capture('plain');
 	});
 
-	page.start().suite('Sports Menu', function(child) {
+	page.start().suite('Livebetting Menu', function(child) {
 		child
-		.setCaptureElements(page.getSportsMenu())
+		.setCaptureElements(page.getLivebettingMenu())
+		.ignoreElements('#livebetting_menu .sports')
+		.capture('collapsed', function(actions) {
+			actions.click(this.openedLiveSport);
+		});
+	});
+
+	page.start().suite('Coming Events', function(child) {
+		child
+		.setCaptureElements(page.getComingEvents())
+		.ignoreElements('#livebetting_coming_events .coming_events')
 		.capture('plain');
 	});
 
-	page.start().suite('Articles', function(child) {
+	page.start().suite('Live Betting Banner', function(child) {
 		child
-		.setCaptureElements(page.getArticlesWidget())
-		.ignoreElements('#article_timer', '.article_image_container')
+		.setCaptureElements(page.getLivebettingBanner())
+		.ignoreElements('#livebetting_banner .banner-inner-container')
 		.capture('plain');
 	});
 
-	page.start().suite('Live widget', function(child) {
+	page.start().suite('Football Highlights', function(child) {
 		child
-		.setCaptureElements(page.getLiveWidget())
-		.ignoreElements('#osg-events-region')
-		.capture('plain');
-	});
-
-	page.start().suite('Next Games', function(child) {
-		child
-		.setCaptureElements(page.getNextGamesWidget())
-		.ignoreElements('#coupon_next_games table')
+		.setCaptureElements(page.getFootballHighlights())
 		.capture('plain');
 	});
 

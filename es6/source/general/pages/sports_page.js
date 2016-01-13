@@ -18,7 +18,6 @@ class SportsPage extends BasePage {
         this.footer = "#page_footer";
     }
 
-    //Connected widgets
     getHeader() { return this.header; }
     getUserMenu() { return this.userMenu; }
     getNavigationMenu() { return this.navigationMenu; }
