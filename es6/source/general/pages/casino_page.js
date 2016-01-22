@@ -13,9 +13,10 @@ class CasinoPage extends BasePage {
         this.sligshowContent = "#slideshow_content";
         this.gamesBottomMenu = "#inner_games_bottom_menu";
         this.footerLogos = "img[alt~='footer_logos']";
-        this.gameTabPanels = ".game_tab_panels";
+        this.gameTabPanels = "div.game_block";
         this.gameCategoryLinks = ".game_category_links";
         this.footerLegal = "#footer_legal";
+        this.navigationMenu = ".top_menu";
     }
     getHeader() { return this.header; }
     getUserMenu() { return this.userMenu; }
@@ -27,6 +28,7 @@ class CasinoPage extends BasePage {
     getGameTabPanels() { return this.gameTabPanels; }
     getGameCategoryLinks() { return this.gameCategoryLinks;}
     getFooterLegal() { return this.footerLegal; }
+    getNavigationMenu() { return this.navigationMenu; }
 
 }
 module.exports = CasinoPage;

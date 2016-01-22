@@ -71,5 +71,10 @@ page.start().suite('KlasBahis Casino Page', function(parent)
             .capture('plain');
     });
 
+    page.start().suite('Navigation Menu ', function (child) {
+        child
+            .setCaptureElements(page.getNavigationMenu())
+            .capture('plain');
+    });
 
 });
