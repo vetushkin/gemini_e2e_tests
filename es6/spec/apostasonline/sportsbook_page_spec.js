@@ -1,7 +1,7 @@
 var SportsPage = require('../../source/general/pages/sports_page');
 var page = new SportsPage();
 
-page.start().suite('KlasBahis Sportsbook Page', function(parent) {
+page.start().suite('ApostasOnline Sportsbook Page', function(parent) {
 	parent.setUrl('/').before(function(actions, find) {
 		this.userName = find('#user_username');
 		this.password = find('#user_password');
