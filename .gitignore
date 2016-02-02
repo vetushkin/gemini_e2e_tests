@@ -1,0 +1,10 @@
+es5
+*.log
+*.png
+.idea
+.DS_Store
+node_modules
+*private*js
+testresults
+.idea/workspace.xml
+gemini-report
