@@ -15,9 +15,9 @@ class SportsPage extends BasePage {
         this.articlesWidget = "#articles";
         this.liveWidget = "#live-widget-container";
         this.nextGamesWidget = "#coupon_next_games"; 
+        this.footer = "#page_footer";
     }
 
-    //Connected widgets
     getHeader() { return this.header; }
     getUserMenu() { return this.userMenu; }
     getNavigationMenu() { return this.navigationMenu; }
@@ -27,6 +27,7 @@ class SportsPage extends BasePage {
     getArticlesWidget() { return this.articlesWidget; }
     getLiveWidget() { return this.liveWidget; }
     getNextGamesWidget() { return this.nextGamesWidget; }
+    getFooter() { return this.footer; }
 }
 
 module.exports = SportsPage;
