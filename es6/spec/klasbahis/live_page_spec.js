@@ -1,7 +1,7 @@
 var LivePage = require('../../source/general/pages/live_page');
 var page = new LivePage();
 
-page.start().suite('KlasBahis Live Page', function(parent) {
+page.start().suite('BizimBahis Live Page', function(parent) {
 	parent.setUrl('/tr-TR/live').before(function(actions, find) {
 		this.userName = find('#user_username');
 		this.password = find('#user_password');

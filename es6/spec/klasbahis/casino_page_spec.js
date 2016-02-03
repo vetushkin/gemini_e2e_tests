@@ -2,7 +2,7 @@
 var CasinoPage = require('../../source/general/pages/casino_page');
 var page = new CasinoPage();
 
-page.start().suite('KlasBahis Casino Page', function(parent)
+page.start().suite('BizimBahis Casino Page', function(parent)
 {
     parent.setUrl('/tr-TR/netent_splash').before(function (actions, find) {
         this.userName = find('#user_username');

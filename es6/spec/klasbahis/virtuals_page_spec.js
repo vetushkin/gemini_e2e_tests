@@ -1,7 +1,7 @@
 var AccountPage = require('../../source/general/pages/account_page');
 var page = new AccountPage();
 
-	page.start().suite('BizimBahis Account Page', function(parent) {
+	page.start().suite('BizimBahis Virtuals Page', function(parent) {
 		parent.setUrl('/').before(function(actions, find) {
 		this.userName = find('#user_username');
 		this.password = find('#user_password');

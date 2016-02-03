@@ -1,47 +1,44 @@
 {
-  "name": "e2e-offside",
+  "name": "gemini-e2e-tests",
   "version": "0.1.0",
-  "description": "E2E protractor tests for Offside gaming platform",
-  "author": "Your Name <kristian@sportsmediainteractive.co.uk>",
+  "description": "E2E gemini tests for Offside gaming platform",
+  "author": "Vitalii Vetushkin <vitalii@bsbulgaria.com>",
   "contributors": [
     {
-      "name": "Vitalii Vietushkin",
-      "email": "vitalii@bsbulgaria.com"
+      "name": "Borislav Borisov",
+      "email": "borislav.borisov@bsbulgaria.com"
     }
   ],
   "scripts": {
-    "test": "protractor"
+    "test": "gemini"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/smigit/protractor-e2e-tests.org"
+    "url": "https://github.com/smigit/gemini_e2e_tests"
   },
   "bugs": {
-    "url": "https://github.com/smigit/protractor-e2e-tests.org/issues"
+    "url": "https://github.com/smigit/gemini_e2e_tests.org/issues"
   },
   "keywords": [
     "e2e",
-    "protractor",
+    "gemini",
     "tests",
-    "offside"
+    "offsidegaming"
   ],
   "dependencies": {
     "babel": "^5.8.12",
+    "gemini": "^2.1.1",
+    "gemini-gui": "^2.1.0",
     "gulp": "^3.9.0",
-    "i18n": "~0.5.0",
-    "protractor": "^2.1.0",
     "webdriver-manager": "^7.0.1",
     "yamljs": "~0.2.3"
   },
   "devDependencies": {
-    "babel": "~5.8.21",
     "del": "^1.2.0",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.2",
     "gulp-babel": "^5.1.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "jasmine-reporters": "^2.0.7",
-    "protractor-html-screenshot-reporter": "mping/protractor-html-screenshot-reporter"
+    "gulp-sourcemaps": "^1.5.2"
   },
   "license": "MIT"
 }
